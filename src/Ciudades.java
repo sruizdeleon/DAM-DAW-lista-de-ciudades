@@ -55,7 +55,7 @@ public class Ciudades {
           while(true) {
             System.out.println("\n--------\nMESSAGE: Introduce el nombre de la ciudad o escribe \"Volver\" para volver al menú principal:\n--------\n");
             entradaUsuario = scanner.nextLine();
-            if(entradaUsuario.equals("Volver") || entradaUsuario.equals("volver")){
+            if(entradaUsuario.equalsIgnoreCase("Volver")){
               break; // Volver al menú principal
             } else if(ciudades.add(entradaUsuario.toLowerCase())){ // Guardamos la ciudad en minúsculas
               System.out.println("\n--------\nSUCCESS: Ciudad añadida con éxito.\n--------\n");
@@ -88,7 +88,7 @@ public class Ciudades {
           while (true) {
             System.out.println("--------\nMESSAGE: Introduce el nombre de la ciudad que quieres BUSCAR o escribe \"Volver\" para volver al menú principal:\n--------\n");
             entradaUsuario = scanner.nextLine();
-            if(entradaUsuario.equals("Volver") || entradaUsuario.equals("volver")){ // Volver al menú principal
+            if(entradaUsuario.equalsIgnoreCase("Volver")){ // Volver al menú principal
               break;
             } else if(ciudades.contains(entradaUsuario.toLowerCase())) { // Si contiene el elemento mensaje de éxito
               System.out.println("\n--------\nSUCCESS: "+ entradaUsuario +" se encuentra en el listado.\n--------\n");
@@ -102,7 +102,7 @@ public class Ciudades {
           while (true) {
             System.out.println("--------\nMESSAGE: Introduce el nombre de la ciudad que quieres BORRAR o escribe \"Volver\" para volver al menú principal:\n--------\n");
             entradaUsuario = scanner.nextLine();
-            if(entradaUsuario.equals("Volver") || entradaUsuario.equals("volver")){ // Volver al menú principal
+            if(entradaUsuario.equalsIgnoreCase("Volver")){ // Volver al menú principal
               break;
             } else if(ciudades.contains(entradaUsuario.toLowerCase())) { // Si contiene el elemento, lo borramos y mensaje de éxito
               ciudades.remove(entradaUsuario.toLowerCase());
